@@ -63,15 +63,15 @@ Memvalidasi strategi pit stop berdasarkan **regulasi FIA Formula 1 (Article 30)*
 
 **Aturan FIA:**
 
-- Dry Race: Wajib menggunakan minimal 2 compound kering berbeda
-- Wet Race: Aturan mandatory compound tidak berlaku
+- Wajib menggunakan minimal **2 compound berbeda** selama balapan (dry maupun wet)
 
 **Knowledge Base:**
 
 ```prolog
 IsDry(Soft), IsDry(Medium), IsDry(Hard)
 IsWet(Intermediate), IsWet(Wet)
-Used(x) ∧ IsDry(x) ∧ Used(y) ∧ IsDry(y) ∧ Different(x,y) → MandatorySatisfied()
+Different(X, Y) untuk setiap pasangan compound berbeda
+Used(x) ∧ Used(y) ∧ Different(x, y) → MandatorySatisfied()
 ```
 
 ### Modul 4: Decision Engine (Race Simulator)
