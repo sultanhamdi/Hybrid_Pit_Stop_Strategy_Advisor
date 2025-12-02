@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+seaborn
+scikit-fuzzy
+networkx
+fastf1
+requests
+jupyter
